@@ -1,0 +1,98 @@
+.footer{
+    position: relative;
+    background: #14181F;
+    padding: 90px 0 130px;
+    // &:before{
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     left: 0; right: 0;
+    //     bottom: 0;
+    //     height: 100%;
+    //     background-image: url(../public/Footer_pseudo-background.svg);
+    //     background-position: bottom center;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     z-index: 0;
+    // }
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 106px;
+        .upper_footer{
+            display: flex;
+            align-items: end;
+            gap: 40px;
+            .footer_left_col,
+            .footer_right_col{
+                width: calc(50% - 20px);
+            }
+            .footer_left_col{
+                display: flex;
+                flex-direction: column;
+                gap: 36px;
+                .logotype{
+                    filter: brightness(100);
+                }
+                .footer_socials_icon{
+                    display: flex;
+                    gap: 18px;
+                    filter: brightness(100);
+                }
+            }
+            .footer_right_col{
+                display: flex;
+                gap: 117px;
+                .footer_menu{
+                    display: flex;
+                    flex-direction: column;
+                    .footer_menu_title{
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        color: #FFFFFF;
+                        opacity: 0.5;
+                        margin-bottom: 12px;
+                    }
+                    .footer_menu_items{
+                        display: flex;
+                        flex-direction: column;
+                        list-style: none;
+                        gap: 6px;
+                        li{
+                            padding: 0;
+                            a{
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 22px;
+                                color: #FFFFFF;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .lower_footer{
+            display: flex;
+            gap: 40px;
+            .footer_left_col,
+            .footer_right_col{
+                width: calc(50% - 20px);
+                .lower_footer_text{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    color: #FFFFFF;
+                    a{
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        text-decoration-line: underline;
+                        color: #1B98E0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.about_us{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #0196EB;
+        background-image: url(../public/about-background.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 42px;
+        padding: 61px 60px 62px;
+        .left_col,
+        .right_col{
+            width: 50%;
+            min-width: 520px;
+            max-width: 100%;
+        }
+        .left_col{
+            .section_title{
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 49px;
+                color: #FFFFFF;
+            }
+        }
+        .right_col{
+            .about_text{
+                font-size: 16px;
+                font-weight: 400;
+                color: #FFFFFF;
+                line-height: 22px;
+
+            }
+        }
+    }
+}
