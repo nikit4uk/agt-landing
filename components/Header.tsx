@@ -1,9 +1,35 @@
+import React, { useState, useEffect } from "react";
 import styles from '@/styles/Header.module.scss';
 import Image from 'next/image'
 
 export default function Header() {
+    const [scrolled, setScrolled] = useState(false);
+    const [mobMenuActive, setMobMenuActive] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 50) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
+
+    const MobMenuActivate = () => {
+        if (mobMenuActive === false) {
+            setMobMenuActive(true)
+        } else {
+            setMobMenuActive(false)
+        }
+    }
+
     return(
-        <header className={styles.header}>
+        <header className={!scrolled ? `${styles.header}` : `${styles.header} ${styles.scrolled}`}>
             <div className={`${styles.container} container`}>
                 <Image 
                     src="/AGT Logo.png"
@@ -13,8 +39,8 @@ export default function Header() {
                     height={34}
                     priority
                 />
-                <div className={styles.menu}>
-                    <nav>
+                <div className={!mobMenuActive ? `${styles.menu_wrap}` : `${styles.menu_wrap} ${styles.menu_opened}`}>
+                    <nav className={styles.menu}>
                         <ul>
                             <li>
                                 <a className={styles.menu_link} href='#direction'>Directions</a>
@@ -28,7 +54,7 @@ export default function Header() {
                         </ul>
                         
                     </nav>
-                    <a className={styles.mob_menu_btn}>
+                    <a className={styles.mob_menu_btn} onClick={MobMenuActivate}>
                         <span></span>
                         <span></span>
                         <span></span>

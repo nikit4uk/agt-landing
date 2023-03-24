@@ -38,3 +38,48 @@
         }
     }
 }
+
+@media screen and (max-width:1280px){
+    .quality{
+        padding: 5px 40px 0; 
+    }
+}
+@media screen and (max-width:1024px){
+    .quality{
+        .container{
+            padding: 50px 60px 186px;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .quality{
+        padding: 5px 20px 0;
+        .container{
+            padding: 50px 60px 186px;
+            .section_title{
+                font-size: 32px;
+                line-height: 40px;
+            }
+            .quality_text{
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+@media screen and (max-width:450px){
+    .quality{
+        padding: 5px 10px 0;
+        .container{
+            padding: 46px 30px 140px;
+            .section_title{
+                font-size: 18px;
+                line-height: 25px;
+            }
+            .quality_text{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}

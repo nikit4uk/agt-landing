@@ -43,7 +43,7 @@ export default function SocialIcons() {
                 <Image 
                     src="/social-icon/twitter.svg"
                     alt="twitter-icon"
-                    width={32}
+                    width={40}
                     height={32}
                     priority
                 />

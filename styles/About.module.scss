@@ -1,4 +1,5 @@
 .about_us{
+    padding-top: 5px;
     .container{
         display: flex;
         flex-wrap: wrap;
@@ -12,7 +13,6 @@
         .left_col,
         .right_col{
             width: 50%;
-            min-width: 520px;
             max-width: 100%;
         }
         .left_col{
@@ -21,16 +21,90 @@
                 font-weight: 400;
                 line-height: 49px;
                 color: #FFFFFF;
+                margin-bottom: 8px;
             }
         }
         .right_col{
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            gap: 23px;
             .about_text{
                 font-size: 16px;
                 font-weight: 400;
                 color: #FFFFFF;
                 line-height: 22px;
-
             }
+            .about_more_text{
+                display: none;
+                z-index: 4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1280px){
+    .about_us{
+        padding: 5px 40px 0;
+    }
+}
+@media screen and (max-width:768px){
+    .about_us{
+        padding: 5px 20px 0;
+        .container{
+            background-image: url(../public/about-background-mob.webp);
+            .left_col,
+            .right_col{
+                width: 100%;
+            }
+            .left_col{
+                .section_title{
+                    font-size: 32px;
+                }
+            }
+            .right_col{
+                padding-left: 0px;
+                .about_more_text{
+                    display: block;
+                }
+                &:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0; right: 0;
+                    bottom: 0;
+                    height: 167px;
+                    background: linear-gradient(180deg, #0190E8 49.48%, rgba(1, 144, 232, 0) 100%);
+                    transform: rotate(180deg);
+                    border-radius: 42px;
+                    z-index: 2;
+                    transition: all ease-in-out .3s;
+                }
+                &.text_hidden{
+                    .about_text{
+                        max-height: 110px;
+                        overflow: hidden;
+                        transition: all ease-in-out .3s;
+                    }
+                }
+                &.text_visioble{
+                    .about_text{
+                        max-height: 10000px;
+                        overflow: hidden;
+                    }
+                    &:before{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:450px){
+    .about_us{
+        padding: 5px 10px 0;
+        .container{
+            padding: 30px 30px 26px;
         }
     }
 }

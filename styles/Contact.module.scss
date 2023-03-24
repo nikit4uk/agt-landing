@@ -6,7 +6,7 @@
         display: block;
         position: absolute;
         left: 0; right: 0;
-        bottom: 0;
+        bottom: -2px;
         height: 100%;
         background-image: url(../public/Footer_pseudo-background.svg);
         background-position: bottom center;
@@ -70,6 +70,7 @@
                     }
                 }
                 .btn{
+                    padding: 16.5px 0 18.5px;
                     margin-top: 2px;
                 }
             }
@@ -101,7 +102,99 @@
             }
             .contact_socials_icon{
                 display: flex;
-                gap: 20px;
+                gap: 19px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .contact{
+        .container{
+            flex-wrap: wrap-reverse;
+            .contact_form{
+                .section_title{
+                    font-size: 28px;
+                    line-height: 42px;
+                }
+                .contact_form_text{
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+                form{
+                    .form_item{
+                        label{
+                            font-size: 20px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+            .contact_information{
+                padding: 67px 0px 85px;
+                .section_title{
+                    font-size: 32px;
+                    line-height: 40px; 
+                    font-size: 24px;
+                    line-height: 33px;
+                }
+                .contact_information_text{
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+                .contact_socials_icon{
+                    gap: 16px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:450px){
+    .contact{
+        padding: 10px 0 70px;
+        .container{
+            flex-wrap: wrap-reverse;
+            gap: 40px;
+            padding: 0 10px;
+            .contact_form,
+            .contact_information{
+                width: 100%;
+            }
+            .contact_form{
+                padding: 30px 32px;
+                .section_title{
+                    font-size: 24px;
+                    line-height: 33px;
+                    margin-bottom: 12px;
+                }
+                .contact_form_text{
+                    margin-bottom: 40px;
+                }
+                form{
+                    .form_item{
+                        margin-bottom: 20px;
+                        label{
+                            font-size: 20px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+            .contact_information{
+                padding: 30px 0;
+                .section_title{
+                    font-size: 32px;
+                    line-height: 40px; 
+                    font-size: 24px;
+                    line-height: 33px;
+                }
+                .contact_information_text{
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+                .contact_socials_icon{
+                    gap: 16px;
+                }
             }
         }
     }
