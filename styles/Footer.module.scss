@@ -21,6 +21,15 @@
                 .logotype{
                     filter: brightness(100);
                 }
+                .upper_footer_text{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                }
+                .desc_hidden{
+                    display: none;
+                }
                 .footer_socials_icon{
                     display: flex;
                     gap: 18px;
@@ -66,6 +75,12 @@
             .footer_left_col,
             .footer_right_col{
                 width: calc(50% - 20px);
+                .mob_hidden{
+                    display: block!important;
+                }
+                .desc_hidden{
+                    display: none!important;
+                }
                 .lower_footer_text{
                     font-size: 16px;
                     font-weight: 400;
@@ -79,11 +94,128 @@
                         color: #1B98E0;
                     }
                 }
+                .footer_socials_icon{
+                    display: flex;
+                    gap: 18px;
+                    filter: brightness(100);
+                }
             }
             .footer_right_col{
                 text-align: end;
                 .lower_footer_text{
                     width: 386px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px){
+    .footer{
+        .container{
+            .lower_footer{
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                .footer_left_col,
+                .footer_right_col{
+                    min-width: 420px;
+                    .lower_footer_text{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .footer{
+        .container{
+            gap: 42px;
+            .upper_footer{
+                flex-wrap: wrap;
+                gap: 20px;
+                .footer_left_col,
+                .footer_right_col{
+                    min-width: 420px;
+                    .mob_hidden{
+                        display: none!important;
+                    }
+                    .desc_hidden{
+                        display: block!important;
+                    }
+                }
+                .footer_right_col{
+                    .footer_menu{
+                        display: flex;
+                        flex-direction: column;
+                        .footer_menu_title,
+                        .footer_menu_items li a{
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+            }
+            .lower_footer{
+                justify-content: flex-start;
+                .footer_left_col,
+                .footer_right_col{
+                    .mob_hidden{
+                        display: none!important;
+                    }
+                    .desc_hidden{
+                        display: block!important;
+                    }
+                }
+                .footer_right_col{
+                    .lower_footer_text{
+                        font-size: 14px;
+                        line-height: 19px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:650px){
+    .footer{
+        padding: 55px 0px 70px;
+        .container{
+            padding: 20px 10px;
+            .upper_footer{
+                gap: 43px;
+                .footer_left_col{
+                    gap: 24px;
+                    padding-top: 23px;
+                    .logotype{
+                        width: 140px;
+                        height: auto;
+                    }
+                    .upper_footer_text{
+                        width: 220px;
+                    }
+                }
+                .footer_right_col{
+                    gap: 67px;
+                    .footer_menu{
+                        .footer_menu_items{
+                            gap: 2px;
+                        }
+                    }
+                }
+            }
+            .lower_footer{
+                .footer_left_col{
+                    .footer_socials_icon{
+                        gap: 16px;
+                        a img{
+                            width: auto;
+                            height: 35px;
+                        }
+                    }
                 }
             }
         }

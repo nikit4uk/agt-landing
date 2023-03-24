@@ -120,13 +120,23 @@
     .header{
         .container{
             .menu_wrap{
-                .menu{
-
-                }
                 .mob_menu_btn{
                     display: flex;
                 }
             }
+        }
+    }
+}
+@media screen and (max-width:650px) {
+    .header{
+        padding-top: 0px;
+        .container{
+            padding: 15px 10px;
+            .logotype{
+                width: 103px;
+                height: auto;
+            }
+            
         }
     }
 }

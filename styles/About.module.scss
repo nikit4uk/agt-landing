@@ -100,11 +100,30 @@
         }
     }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:650px){
     .about_us{
-        padding: 5px 10px 0;
+        padding: 40px 10px 0;
         .container{
-            padding: 30px 30px 26px;
+            padding: 30px 30px 32px 32px;
+            border-radius: 24px;
+            .left_col{
+                .section_title{
+                    font-size: 24px;
+                    line-height: 33px;
+                    margin-bottom: 14px;
+                }
+            }
+            .right_col{
+                .about_text{
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: -0.04em;
+                    span{
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
         }
     }
 }
