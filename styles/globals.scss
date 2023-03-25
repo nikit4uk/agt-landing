@@ -8,13 +8,13 @@
 
 html{
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body{
   background: #fFF;
   overflow-x: hidden;
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;

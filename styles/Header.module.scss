@@ -12,7 +12,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .logotype{}
         .menu_wrap{
             .menu{
                 transition: all ease-in-out .3s;
@@ -25,7 +24,6 @@
                         list-style: none;
                         padding: 0;
                         .menu_link{
-                            // font-family: 'Open Sans';
                             font-style: normal;
                             font-weight: 400;
                             font-size: 16px;

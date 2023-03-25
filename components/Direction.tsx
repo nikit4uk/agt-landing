@@ -2,7 +2,7 @@ import styles from '@/styles/Direction.module.scss';
 
 export default function Direction() {
     return (
-        <section className={styles.direction}>
+        <section id='direction' className={styles.direction}>
             <div className={`${styles.container} container`}>
             <div className={`${styles.direction_item} ${styles.space}`}>
                     <div className={styles.direction_text}>
