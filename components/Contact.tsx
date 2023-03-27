@@ -27,15 +27,15 @@ export default function Contact() {
                     <form>
                         <div className={styles.form_item}>
                             <input type="text" id="name" placeholder="" required onChange={(e) => {setCostumerName(e.target.value)}}/>
-                            <label for="name">Name</label>
+                            <label htmlFor="name">Name</label>
                         </div>
                         <div className={styles.form_item}>
                             <input type="email" id="email" placeholder="" required onChange={(e) => {setCostumerEmail(e.target.value)}}/>
-                            <label for="email">E-mail</label>
+                            <label htmlFor="email">E-mail</label>
                         </div>
                         <div className={styles.form_item}>
                             <input type="phone" id="phone" placeholder="" required onChange={(e) => {setCostumerPhone(e.target.value)}}/>
-                            <label for="phone">Phone</label>
+                            <label htmlFor="phone">Phone</label>
                         </div>
                         <a className={`${styles.btn} btn`} onClick={pushCostumerInfo}>Send</a>
                     </form>
