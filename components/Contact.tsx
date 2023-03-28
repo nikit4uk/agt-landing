@@ -35,6 +35,11 @@ export default function Contact() {
             }
         }
     }
+    const clearFormFields = () => {
+        setCostumerName('')
+        setCostumerEmail('')
+        setCostumerPhone('')
+    }
 
     return (
         <section id='contacts' className={styles.contact}>
@@ -44,11 +49,11 @@ export default function Contact() {
                     <p className={styles.contact_form_text}>We wil respond you in 2 working days</p>
                     <form>
                         <div className={!costumerNameVisited ? `${styles.form_item}` : `${styles.form_item} ${styles.form_item_visited}`}>
-                            <input type="text" id="name" placeholder="" defaultValue={costumerName} required onClick={() => setCostumerNameVisited(true)} onChange={(e) => {setCostumerName(e.target.value)}}/>
+                            <input type="text" id="name" placeholder="" value={costumerName} required onClick={() => setCostumerNameVisited(true)} onChange={(e) => {setCostumerName(e.target.value)}}/>
                             <label htmlFor="name">Name</label>
                         </div>
                         <div className={!costumerEmailVisited ? `${styles.form_item}` : `${styles.form_item} ${styles.form_item_visited}`}>
-                            <input type="email" id="email" placeholder="" defaultValue={costumerEmail} required onClick={() => setCostumerEmailVisited(true)} onChange={(e) => {setCostumerEmail(e.target.value)}}/>
+                            <input type="email" id="email" placeholder="" value={costumerEmail} required onClick={() => setCostumerEmailVisited(true)} onChange={(e) => {setCostumerEmail(e.target.value)}}/>
                             <label htmlFor="email">E-mail</label>
                         </div>
                         <div className={!costumerPhoneVisited ? `${styles.form_item}` : `${styles.form_item} ${styles.form_item_visited}`}>
@@ -56,14 +61,14 @@ export default function Contact() {
                                 type="tel"
                                 id="phone"
                                 placeholder=""
-                                defaultValue={costumerPhone}
+                                value={costumerPhone}
                                 required
-                                // pattern='[0-9]{2}-[0-9]{3}-[0-9]{4}'
                                 onClick={() => setCostumerPhoneVisited(true)}
                                 onChange={(e) => {setCostumerPhone(e.target.value)}} />
                             <label htmlFor="phone">Phone</label>
                         </div>
                         <a className={`${styles.btn} btn`} onClick={pushCostumerInfo}>Send</a>
+                        <a className={`${styles.btn} btn`} onClick={clearFormFields}>Clear</a>
                     </form>
                 </div>
                 <div className={styles.contact_information}>
