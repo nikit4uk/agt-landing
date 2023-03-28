@@ -35,11 +35,6 @@ export default function Contact() {
             }
         }
     }
-    const clearFormFields = () => {
-        setCostumerName('')
-        setCostumerEmail('')
-        setCostumerPhone('')
-    }
 
     return (
         <section id='contacts' className={styles.contact}>
@@ -68,7 +63,6 @@ export default function Contact() {
                             <label htmlFor="phone">Phone</label>
                         </div>
                         <a className={`${styles.btn} btn`} onClick={pushCostumerInfo}>Send</a>
-                        <a className={`${styles.btn} btn`} onClick={clearFormFields}>Clear</a>
                     </form>
                 </div>
                 <div className={styles.contact_information}>
