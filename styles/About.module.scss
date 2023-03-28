@@ -1,5 +1,6 @@
 .about_us{
-    padding-top: 5px;
+    margin-top: -85px;
+    padding-top: 90px; 
     .container{
         display: flex;
         flex-wrap: wrap;
@@ -45,12 +46,14 @@
 
 @media screen and (max-width:1280px){
     .about_us{
-        padding: 5px 40px 0;
+        margin-top: -85px;
+        padding: 90px 40px 0;
     }
 }
 @media screen and (max-width:768px){
     .about_us{
-        padding: 5px 20px 0;
+        margin-top: -85px;
+        padding: 90px 20px 0;
         .container{
             background-image: url(../public/about-background-mob.webp);
             .left_col,
@@ -102,7 +105,8 @@
 }
 @media screen and (max-width:650px){
     .about_us{
-        padding: 40px 10px 0;
+        margin-top: -85px;
+        padding: 130px 10px 0;
         .container{
             padding: 30px 30px 32px 32px;
             border-radius: 24px;

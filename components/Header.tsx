@@ -49,7 +49,7 @@ export default function Header() {
                                 <a className={styles.menu_link} href='#contacts'>Contacts</a>
                             </li>
                             <li>
-                                <a href='' className={`${styles.btn} btn btn-solid`}>Download catalogue</a>
+                                <a href='#direction' className={`${styles.btn} btn btn-solid`}>Download catalogue</a>
                             </li>
                         </ul>
                         

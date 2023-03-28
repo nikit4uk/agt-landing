@@ -210,6 +210,7 @@
             .lower_footer{
                 .footer_left_col{
                     .footer_socials_icon{
+                        display: flex!important;
                         gap: 16px;
                         a img{
                             width: auto;

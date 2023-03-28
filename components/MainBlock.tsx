@@ -5,7 +5,7 @@ export default function MainBlock() {
         <section className={styles.main}>
             <div className={`${styles.container} container`}>
                 <h1>Leading UA Intelligent Aerospace market</h1>
-                <a className={`${styles.btn} btn`}>Download catalogue</a>
+                <a href='#direction' className={`${styles.btn} btn`}>Download catalogue</a>
             </div>
         </section>
     )

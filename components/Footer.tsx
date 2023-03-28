@@ -26,14 +26,14 @@ export default function Footer() {
                             <h5 className={styles.footer_menu_title}>Navigation</h5>
                             <ul className={styles.footer_menu_items}>
                                 <li>
-                                    <a href='#'>About AGT</a>
+                                    <a href='#about'>About AGT</a>
                                 </li>
                                 <li>
-                                    <a href='#'>Production</a>
+                                    <a href='#direction'>Production</a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href='#'>Partners</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div className={styles.footer_menu}>

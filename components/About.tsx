@@ -13,7 +13,7 @@ export default function About() {
     }
 
     return (
-        <section className={styles.about_us}>
+        <section id='about' className={styles.about_us}>
             <div className={`${styles.container} container`}>
             <div className={styles.left_col}>
                     <h3 className={styles.section_title}>About us</h3>

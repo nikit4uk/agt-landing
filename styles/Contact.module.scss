@@ -56,6 +56,9 @@
                         &:valid ~ label{
                             top: -15px;
                         }
+                        // &:invalid{
+                        //     border-bottom: 1px solid #e43636;
+                        // }
                     }
                     label{
                         position:absolute;
@@ -67,6 +70,14 @@
                         line-height: 22px;
                         color: #1E1E23;
                         transition: all ease-in-out .3s;
+                    }
+                    &.form_item_visited{
+                        input:invalid{
+                            border-bottom: 1px solid #e43636;
+                        }
+                        label{
+                            top: -15px;
+                        }
                     }
                 }
                 .btn{
@@ -164,7 +175,7 @@
 }
 @media screen and (max-width:650px){
     .contact{
-        padding: 10px 0 70px;
+        padding: 10px 0 100px;
         .container{
             flex-wrap: wrap-reverse;
             gap: 32px;

@@ -4,17 +4,35 @@ import SocialIcons from './SocialIcons'
 
 export default function Contact() {
     const [costumerName, setCostumerName] = useState('');
+    const [costumerNameVisited, setCostumerNameVisited] = useState(false);
     const [costumerEmail, setCostumerEmail] = useState('');
+    const [costumerEmailVisited, setCostumerEmailVisited] = useState(false);
     const [costumerPhone, setCostumerPhone] = useState('');
+    const [costumerPhoneVisited, setCostumerPhoneVisited] = useState(false);
 
     const pushCostumerInfo = () => {
         if(costumerName && costumerEmail && costumerPhone) {
-            let apiURL = `https://api.telegram.org/bot6184038590:AAHKqNnbcOjpe00WgYR5tCr1IYnphWT8hwc/sendmessage?chat_id=-940401596&parse_mode=HTML&text=Оформлен%20новый%20заказ%20на%20<a href="http://agt-agent.com">agt-agent.com</a>%0D%0A<b>Имя:</b> ${costumerName}%0D%0A<b>EMail:</b> ${costumerEmail}%0D%0A<b>Телефон:</b> ${costumerPhone}`;
-            fetch(apiURL, {
-                method: "POST" })
-                .then(function(response) {
-                    return response.json(); 
-            })
+            let EmailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if( costumerEmail.match(EmailValidation) ) {
+                // let TelValidation = /^\d{10}$/;
+                let TelValidation = /^[0-9.+]*$/;
+                if( costumerPhone.match(TelValidation) ) {
+
+                    let apiURL = `https://api.telegram.org/bot6184038590:AAHKqNnbcOjpe00WgYR5tCr1IYnphWT8hwc/sendmessage?chat_id=-940401596&parse_mode=HTML&text=Оформлен%20новый%20заказ%20на%20<a href="http://agt-agent.com">agt-agent.com</a>%0D%0A<b>Имя:</b> ${costumerName}%0D%0A<b>EMail:</b> ${costumerEmail}%0D%0A<b>Телефон:</b> ${costumerPhone}`;
+                    fetch(apiURL, {
+                        method: "POST"
+                    })
+                        .then(function(response) {
+                                return response.json(); 
+                        })
+                        .then(() => {
+                            setCostumerName('')
+                            setCostumerEmail('')
+                            setCostumerPhone('')
+                        })
+                }
+
+            }
         }
     }
 
@@ -25,16 +43,24 @@ export default function Contact() {
                     <h4 className={styles.section_title}>Or leave your contacts:</h4>
                     <p className={styles.contact_form_text}>We wil respond you in 2 working days</p>
                     <form>
-                        <div className={styles.form_item}>
-                            <input type="text" id="name" placeholder="" required onChange={(e) => {setCostumerName(e.target.value)}}/>
+                        <div className={!costumerNameVisited ? `${styles.form_item}` : `${styles.form_item} ${styles.form_item_visited}`}>
+                            <input type="text" id="name" placeholder="" defaultValue={costumerName} required onClick={() => setCostumerNameVisited(true)} onChange={(e) => {setCostumerName(e.target.value)}}/>
                             <label htmlFor="name">Name</label>
                         </div>
-                        <div className={styles.form_item}>
-                            <input type="email" id="email" placeholder="" required onChange={(e) => {setCostumerEmail(e.target.value)}}/>
+                        <div className={!costumerEmailVisited ? `${styles.form_item}` : `${styles.form_item} ${styles.form_item_visited}`}>
+                            <input type="email" id="email" placeholder="" defaultValue={costumerEmail} required onClick={() => setCostumerEmailVisited(true)} onChange={(e) => {setCostumerEmail(e.target.value)}}/>
                             <label htmlFor="email">E-mail</label>
                         </div>
-                        <div className={styles.form_item}>
-                            <input type="phone" id="phone" placeholder="" required onChange={(e) => {setCostumerPhone(e.target.value)}}/>
+                        <div className={!costumerPhoneVisited ? `${styles.form_item}` : `${styles.form_item} ${styles.form_item_visited}`}>
+                            <input 
+                                type="tel"
+                                id="phone"
+                                placeholder=""
+                                defaultValue={costumerPhone}
+                                required
+                                // pattern='[0-9]{2}-[0-9]{3}-[0-9]{4}'
+                                onClick={() => setCostumerPhoneVisited(true)}
+                                onChange={(e) => {setCostumerPhone(e.target.value)}} />
                             <label htmlFor="phone">Phone</label>
                         </div>
                         <a className={`${styles.btn} btn`} onClick={pushCostumerInfo}>Send</a>
