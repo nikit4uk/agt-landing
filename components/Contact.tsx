@@ -69,8 +69,8 @@ export default function Contact() {
                     <h4 className={styles.section_title}>We are open <br/>to collaborate</h4>
                     <p className={styles.contact_information_text}>Contact us, briefly describe your questions <br/>and also contact us assoon as possible</p>
                     <a href='tel:+447488818682' className={styles.contact_information_phone}>+447488818682</a>
-                    <a href='mailto:agt.salesdepartment@gmail.com' className={styles.contact_information_phone}>agt.salesdepartment@gmail.com</a>
                     <p className={styles.contact_information_text}>71-75, Shelton Street, Covent Garden, <br/>London, WC2H 9JQ<br/>AEROSPACE GLOBAL TRADE LTD</p>
+                    <a href='mailto:agt.salesdepartment@gmail.com' className={styles.contact_information_email}>agt.salesdepartment@gmail.com</a>
                     <div className={styles.contact_socials_icon}>
                         <SocialIcons />
                     </div>
