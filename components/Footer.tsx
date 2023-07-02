@@ -16,7 +16,7 @@ export default function Footer() {
                             height={34}
                             priority
                         />
-                        <p className={`${styles.upper_footer_text} ${styles.desc_hidden}`}>© 2022 Aerospace Global Trade. All rights reserved.</p>
+                        <p className={`${styles.upper_footer_text} ${styles.desc_hidden}`}>© 2012 Aerospace Global Trade. All rights reserved.</p>
                         <div className={`${styles.footer_socials_icon} ${styles.mob_hidden}`}>
                             <SocialIcons />
                         </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.lower_footer}>
                     <div className={styles.footer_left_col}>
-                        <p className={`${styles.lower_footer_text} ${styles.mob_hidden}`}>© 2022 Aerospace Global Trade. All rights reserved.</p>
+                        <p className={`${styles.lower_footer_text} ${styles.mob_hidden}`}>© 2012 Aerospace Global Trade. All rights reserved.</p>
                         <div className={`${styles.footer_socials_icon} ${styles.desc_hidden}`}>
                             <SocialIcons />
                         </div>

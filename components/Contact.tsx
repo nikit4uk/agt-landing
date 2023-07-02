@@ -18,7 +18,7 @@ export default function Contact() {
                 let TelValidation = /^[0-9.+]*$/;
                 if( costumerPhone.match(TelValidation) ) {
 
-                    let apiURL = `https://api.telegram.org/bot6184038590:AAHKqNnbcOjpe00WgYR5tCr1IYnphWT8hwc/sendmessage?chat_id=-940401596&parse_mode=HTML&text=Оформлен%20новый%20заказ%20на%20<a href="http://agt-agent.com">agt-agent.com</a>%0D%0A<b>Имя:</b> ${costumerName}%0D%0A<b>EMail:</b> ${costumerEmail}%0D%0A<b>Телефон:</b> ${costumerPhone}`;
+                    let apiURL = `https://api.telegram.org/bot6184038590:AAHKqNnbcOjpe00WgYR5tCr1IYnphWT8hwc/sendmessage?chat_id=6172579839&parse_mode=HTML&text=Оформлен%20новый%20заказ%20на%20<a href="http://agt-agent.com">agt-agent.com</a>%0D%0A<b>Имя:</b> ${costumerName}%0D%0A<b>EMail:</b> ${costumerEmail}%0D%0A<b>Телефон:</b> ${costumerPhone}`;
                     fetch(apiURL, {
                         method: "POST"
                     })

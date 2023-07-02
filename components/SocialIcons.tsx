@@ -48,6 +48,15 @@ export default function SocialIcons() {
                     priority
                 />
             </a>
+            <a href='https://www.linkedin.com/company/aerospace-global-trade-ltd/' target='_blanc'>
+                <Image 
+                    src="/social-icon/linkedIn.svg"
+                    alt="linkedin-icon"
+                    width={40}
+                    height={32}
+                    priority
+                />
+            </a>
         </>
     )
 }
